@@ -1,8 +1,5 @@
 from bs4 import BeautifulSoup
-with open("index.html","r") as f:
-    doc = BeautifulSoup(f,"html.parser")
-#print(doc.prettify())
-tag = doc.find_all('p')[0]
-
-#print(tag)
-print(tag.find_all('b'))
+import requests
+url ="https://www.newegg.com/tools/combo-builder/1740?cm_sp=homepage-pers-home%20dynamiccombo_pccomponent-amd-takeover"
+result = requests.get(url)
+print(result.text)
