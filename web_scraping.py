@@ -1,9 +1,7 @@
 from bs4 import BeautifulSoup
-import re
-with open("index2.htm","r") as f:
-    doc = BeautifulSoup(f,"html.parser")
-tags = doc.find_all("input",type = "text")
-for tag in tags:
-   tag["placeholder"]="i changed you!"
-with open("changed.html","w") as file:
-    file.write(str(doc))
+import requests
+url = "https://coinmarketcap.com/"
+result = requests.get(url)
+doc = BeautifulSoup(result.text,"html.parser")
+tbody = doc.tbody
+print(tbody)
