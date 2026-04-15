@@ -4,4 +4,4 @@ url = "https://coinmarketcap.com/"
 result = requests.get(url)
 doc = BeautifulSoup(result.text,"html.parser")
 tbody = doc.tbody
-print(tbody)
+print(tbody.prettify())
