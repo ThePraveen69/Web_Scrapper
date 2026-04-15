@@ -9,3 +9,4 @@ prices={}
 for tr in trows:
     for td in tr:
         print(td)
+        print()
