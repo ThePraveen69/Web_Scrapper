@@ -5,6 +5,7 @@ result = requests.get(url)
 doc = BeautifulSoup(result.text,"html.parser")
 tbody = doc.tbody
 trows = tbody.contents
-print(trows[0].parent)
-print(trows[0].parent.name)
-print(list(trows[0].children))
+prices={}
+for tr in trows:
+    for td in tr:
+        print(td)
