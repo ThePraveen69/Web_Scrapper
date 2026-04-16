@@ -8,5 +8,5 @@ trows = tbody.contents
 prices={}
 for tr in trows:
     name , price = tr.contents[2:4]
-    print(name)
+    print(name.p.string)
     print(price)
