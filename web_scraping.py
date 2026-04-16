@@ -7,6 +7,6 @@ tbody = doc.tbody
 trows = tbody.contents
 prices={}
 for tr in trows:
-    for td in tr:
+    for td in tr.contents[2:4]:
         print(td)
         print()
