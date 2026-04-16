@@ -9,4 +9,4 @@ prices={}
 for tr in trows:
     name , price = tr.contents[2:4]
     print(name)
-    print()
+    print(price)
