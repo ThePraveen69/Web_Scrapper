@@ -6,7 +6,10 @@ doc = BeautifulSoup(result.text,"html.parser")
 tbody = doc.tbody
 trows = tbody.contents
 prices={}
-for tr in trows:
+for tr in trows[0:10]:
     name , price = tr.contents[2:4]
-    print(name.p.string)
-    print(price)
+    final_name = name.p.string
+    final_price = price.string
+    prices[final_name] = final_price
+print(prices)    
+    
